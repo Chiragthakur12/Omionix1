@@ -4,121 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omionix - 3D Digital Experiences That Convert</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-        
-        :root {
-            --primary-color: #6366f1;
-            --secondary-color: #a855f7;
-            --neon-glow: 0 0 10px rgba(99, 102, 241, 0.7);
-            --glass-bg: rgba(255, 255, 255, 0.05);
-        }
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #0f172a;
-            color: #e2e8f0;
-            scroll-behavior: smooth;
-        }
-        
-        /* Glassmorphism Effect */
-        .glass-card {
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            transition: all 0.3s ease;
-        }
-        
-        /* Neon Hover Effects */
-        .neon-hover:hover {
-            box-shadow: var(--neon-glow), 0 0 20px rgba(168, 85, 247, 0.5);
-            transform: translateY(-5px);
-        }
-        
-        /* Gradient Text */
-        .gradient-text {
-            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        /* Parallax Effect */
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        /* Navbar Scroll Effect */
-        .navbar {
-            transition: all 0.3s ease;
-        }
-        
-        .navbar.scrolled {
-            background-color: rgba(15, 23, 42, 0.9);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Pulse Animation */
-        @keyframes pulse {
-            0%, 100% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.6;
-            }
-        }
-        
-        .animate-pulse {
-            animation: pulse 2s infinite;
-        }
-        
-        /* Mobile Responsive Adjustments */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            .project-card {
-                height: 48vw;
-            }
-        }
-
-        /* Testimonial Carousel */
-        .carousel-item {
-            transition: opacity 0.5s ease-in-out;
-            opacity: 0;
-            position: absolute;
-            width: 100%;
-        }
-        
-        .carousel-item.active {
-            opacity: 1;
-            position: relative;
-        }
-    </style>
+    
 </head>
 <body class="relative">
     <!-- Navigation -->
     <nav class="navbar fixed top-0 left-0 w-full z-50 py-3 px-6 md:px-8 flex justify-between items-center bg-slate-900/90 backdrop-blur-sm">
         <div class="flex items-center">
-            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/01bed5ee-ce53-400f-8259-df882ae96007.png" alt="Omionix Logo" class="h-8 mr-2">
-            <span class="text-lg font-bold gradient-text">OMIONIX</span>
+            <img src="WhatsApp Image 2025-06-25 at 13.57.17_3f1f0a21.jpg" alt="Omionix Logo" class="h-12 mr-2">
+            <span class="text-lg font-bold gradient-text">O M I O N I X</span>
         </div>
         <div class="hidden md:flex space-x-6 items-center">
-            <a href="#" class="text-sm text-gray-300 hover:text-white transition duration-300">Home</a>
-            <a href="#work" class="text-sm text-gray-300 hover:text-white transition duration-300">Work</a>
-            <a href="#services" class="text-sm text-gray-300 hover:text-white transition duration-300">Services</a>
-            <a href="#contact" class="text-sm text-gray-300 hover:text-white transition duration-300">Contact</a>
+            <a href="#" class="text-sm text-gray-300 hover:text-white transition duration-300 neon-text">Home</a>
+            <a href="#work" class="text-sm text-gray-300 hover:text-white transition duration-300 neon-text">Projects</a>
+            <a href="#services" class="text-sm text-gray-300 hover:text-white transition duration-300 neon-text">Services</a>
+            <a href="#contact" class="text-sm text-gray-300 hover:text-white transition duration-300 neon-text">Contact</a>
             <button class="ml-4 px-4 py-1 text-sm bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-medium hover:shadow-lg hover:shadow-indigo-500/50 transition duration-300">Get Quote</button>
         </div>
         <button id="mobile-menu-button" class="md:hidden text-white text-2xl focus:outline-none">
@@ -126,7 +28,7 @@
         </button>
         <div id="mobile-menu" class="hidden md:hidden absolute top-14 right-0 w-full bg-slate-900/95 backdrop-blur-sm py-3 px-6">
             <a href="#" class="block py-2 text-sm text-gray-300 hover:text-white">Home</a>
-            <a href="#work" class="block py-2 text-sm text-gray-300 hover:text-white">Work</a>
+            <a href="#work" class="block py-2 text-sm text-gray-300 hover:text-white">Projects</a>
             <a href="#services" class="block py-2 text-sm text-gray-300 hover:text-white">Services</a>
             <a href="#contact" class="block py-2 text-sm text-gray-300 hover:text-white">Contact</a>
             <button class="mt-3 w-full px-4 py-1.5 text-sm bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white">Get Quote</button>
@@ -136,24 +38,24 @@
     <!-- Hero Section -->
     <section class="min-h-screen relative overflow-hidden flex items-center justify-center pt-20">
         <div class="absolute inset-0 overflow-hidden">
-            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/66ba1e22-8a7b-483c-80a7-0fdb0eed80e2.png" alt="Abstract 3D digital landscape with glowing particles and neon lights" class="w-full h-full object-cover">
+            <img src="pexels-semws-32535331.jpg" alt="Abstract 3D digital landscape with glowing particles and neon lights" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-indigo-900/80 via-indigo-900/40 to-indigo-900/80"></div>
         </div>
         <div class="container mx-auto px-6 md:px-12 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-slide-left heading-hover">
                 <span class="gradient-text">We Design Websites</span>
                 <br>That Convert
             </h1>
-            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
+            <p class="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 animate-slide-right text-hover">
                 Cutting-edge 3D web experiences that captivate your audience and drive results
             </p>
             <div class="flex flex-wrap justify-center gap-4">
-                <button class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-medium text-base hover:shadow-lg hover:shadow-indigo-500/50 transition duration-300 neon-hover">
+                <button class="px-6 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-medium text-base hover:shadow-lg hover:shadow-indigo-500/50 transition duration-300 neon-hover animate-slide-left">
                     Get a Free Quote
                 </button>
-                <button class="px-8 py-4 bg-transparent border-2 border-indigo-500 rounded-full text-white font-medium text-lg hover:bg-indigo-500/20 transition duration-300 neon-hover">
+               <a href="#" ><button class="px-8 py-4 bg-transparent border-2 border-indigo-500 rounded-full text-white font-medium text-lg hover:bg-indigo-500/20 transition duration-300 neon-hover animate-slide-right">
                     See Our Work
-                </button>
+                </button></a>
             </div>
         </div>
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -165,8 +67,8 @@
     <section class="py-12 px-6 md:px-10 bg-slate-900/50 backdrop-blur-sm">
         <div class="container mx-auto max-w-5xl">
             <div class="text-center mb-16">
-                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-4">About Omionix</h2>
-                <h3 class="text-2xl md:text-3xl font-bold mb-5">We craft <span class="gradient-text">3D-powered digital experiences</span> that not only look stunning but drive conversions.</h3>
+                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-4 animate-slide-left heading-hover">About Omionix</h2>
+                <h3 class="text-2xl md:text-3xl font-bold mb-5 animate-slide-right heading-hover">We craft <span class="gradient-text">3D-powered digital experiences</span> that not only look stunning but drive conversions.</h3>
                 <div class="glass-card p-8 rounded-2xl text-left">
                     <p class="text-lg mb-4">At Omionix, we blend artistic vision with technological expertise to create digital experiences that leave lasting impressions.</p>
                     <p class="text-lg">Our team of designers, developers, and strategists work together to build websites and applications that engage users while delivering measurable business results.</p>
@@ -179,49 +81,63 @@
     <section class="py-16 px-6 md:px-10 bg-gradient-to-b from-slate-900/50 to-slate-900">
         <div class="container mx-auto max-w-5xl">
             <div class="text-center mb-10">
-                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-3">Our Team</h2>
-                <h3 class="text-2xl md:text-3xl font-bold">Leadership That <span class="gradient-text">Drives Innovation</span></h3>
+                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-3 heading-hover">Our Team</h2>
+                <h3 class="text-2xl md:text-3xl font-bold heading-hover">Leadership That <span class="gradient-text">Drives Innovation</span></h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                 <!-- Founder 1 -->
                 <div class="glass-card rounded-2xl p-8 text-center neon-hover">
                     <div class="w-32 h-32 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2d74b9ae-ffc1-4fe7-b852-b3aaae47b6cd.png" alt="Founder's professional portrait" class="w-full h-full object-cover">
+                        <img src="chirag.jpg
+                        " alt="Founder's professional portrait" class="w-full h-full object-cover">
                     </div>
-                    <h4 class="text-xl font-bold mb-1">Alex Johnson</h4>
+                    <h4 class="text-xl font-bold mb-1">Chirag Singh</h4>
                     <p class="text-indigo-400 mb-3">Founder & CEO</p>
-                    <p class="text-gray-400 text-sm">Visionary leader with 10+ years in digital innovation and business strategy</p>
+                    <p class="text-gray-400 text-sm">Full Stack Developer & Team Leader turning ideas into impactful digital solutions.</p>
                     <div class="flex justify-center space-x-3 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/chirag-singh-539665332" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Chiragthakur12" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 
                 <!-- Founder 2 -->
                 <div class="glass-card rounded-2xl p-8 text-center neon-hover">
                     <div class="w-32 h-32 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4c0d4c01-a141-481d-b4bb-0fd4479495c1.png" alt="Co-Founder's professional portrait" class="w-full h-full object-cover">
+                        <img src="prem.jpg" alt="Co-Founder's professional portrait" class="w-full h-full object-cover">
                     </div>
-                    <h4 class="text-xl font-bold mb-1">Sarah Chen</h4>
-                    <p class="text-indigo-400 mb-3">Co-Founder & CTO</p>
-                    <p class="text-gray-400 text-sm">Technical architect specializing in 3D web technologies and scalable solutions</p>
+                    <h4 class="text-xl font-bold mb-1">Premanand Rawat</h4>
+                    <p class="text-indigo-400 mb-3">Founder & CTO</p>
+                    <p class="text-gray-400 text-sm">AI Specialist managing social media and outreach to grow digital presence with smart strategies.</p>
                     <div class="flex justify-center space-x-3 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.linkedin.com/in/prem-rawat-8533702a2/" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/premstaryt" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <!-- Founder 3 -->
+                 <div class="glass-card rounded-2xl p-8 text-center neon-hover">
+                    <div class="w-32 h-32 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
+                        <img src="Rakshita.jpg" alt="Founder's professional portrait" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-xl font-bold mb-1">Rakshita Sharma</h4>
+                    <p class="text-indigo-400 mb-3">Co-founder</p>
+                    <p class="text-gray-400 text-sm">Creative Designer crafting user-friendly visuals that bring our brand and ideas to life.</p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="https://www.linkedin.com/in/rakshita-sharma-34498b294/" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-linkedin"></i></a>
                         <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
                 
-                <!-- Founder 3 -->
+                <!-- Founder 4 -->
                 <div class="glass-card rounded-2xl p-8 text-center neon-hover">
                     <div class="w-32 h-32 bg-indigo-500/20 rounded-full flex items-center justify-center mx-auto mb-6 overflow-hidden">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1eacc8aa-e632-4da0-85eb-d6ca738a2f92.png" alt="Design Lead's professional portrait" class="w-full h-full object-cover">
+                        <img src="bahubali.jpg" alt="Design Lead's professional portrait" class="w-full h-full object-cover">
                     </div>
-                    <h4 class="text-xl font-bold mb-1">Michael Patel</h4>
-                    <p class="text-indigo-400 mb-3">Head of Design</p>
-                    <p class="text-gray-400 text-sm">Creative director with expertise in immersive 3D UX and visual storytelling</p>
+                    <h4 class="text-xl font-bold mb-1">Nalte Bahubali</h4>
+                    <p class="text-indigo-400 mb-3">Head of Tech</p>
+                    <p class="text-gray-400 text-sm">Technical Coding Expert building robust solutions and solving complex problems with clean, efficient code.</p>
                     <div class="flex justify-center space-x-3 mt-4">
-                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-dribbble"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-behance"></i></a>
+                        <a href="https://www.linkedin.com/in/bahubalinalte/" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/BahubaliNalte" class="text-gray-400 hover:text-indigo-400"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
@@ -232,8 +148,8 @@
     <section id="services" class="py-20 px-6 md:px-12 bg-gradient-to-b from-slate-900/50 to-slate-900">
         <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-4">What We Offer</h2>
-                <h3 class="text-3xl md:text-4xl font-bold mb-6">Our <span class="gradient-text">Services</span></h3>
+                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-4 heading-hover">What We Offer</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 heading-hover">Our <span class="gradient-text">Services</span></h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Service Card 1 -->
@@ -279,36 +195,56 @@
     <section id="work" class="py-20 px-6 md:px-12 bg-slate-900">
         <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-4">Our Portfolio</h2>
-                <h3 class="text-3xl md:text-4xl font-bold mb-6">Featured <span class="gradient-text">Projects</span></h3>
+                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-4 heading-hover">Our Portfolio</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 heading-hover">Featured <span class="gradient-text">Projects</span></h3>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <!-- Project 1 -->
                 <div class="glass-card rounded-2xl overflow-hidden neon-hover group">
                     <div class="relative overflow-hidden h-64">
+                        <img src="https://xstore.b-cdn.net/wp-content/themes/xstore-child/preview-new/img/main-slide.jpeg" alt="E-commerce website project with 3D product visualization" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                            <h4 class="text-xl font-bold mb-2">Ecommerce </h4>
+                            <p class="text-gray-300">Grow your business with our smart eCommerce website.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="glass-card rounded-2xl overflow-hidden neon-hover group">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://i.pinimg.com/736x/45/53/86/455386f21c9a82ccb91ec78dacd9d8a9.jpg" alt="E-commerce website project with 3D product visualization" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
+                            <h4 class="text-xl font-bold mb-2">Customized webiste </h4>
+                            <p class="text-gray-300">Full-stack eCommerce websites tailored to your brand – built on the MERN stack."</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- project 3 -->
+                <div class="glass-card rounded-2xl overflow-hidden neon-hover group">
+                    <div class="relative overflow-hidden h-64">
                         <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ca5ff0b5-fa74-4e47-b0d3-97522a31ea2a.png" alt="E-commerce website project with 3D product visualization" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                            <h4 class="text-xl font-bold mb-2">Nexus Commerce</h4>
-                            <p class="text-gray-300">3D E-commerce platform with AR product preview</p>
+                            <h4 class="text-xl font-bold mb-2">Newkra </h4>
+                            <p class="text-gray-300">Newkra – Fast, Scalable, and Customizable eCommerce Solutions.</p>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2 -->
+                <!-- Project 4 -->
                 <div class="glass-card rounded-2xl overflow-hidden neon-hover group">
                     <div class="relative overflow-hidden h-64">
                         <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9710bcc5-0af2-45c7-bdc1-ce10b0ca3d82.png" alt="Corporate dashboard with data visualization" class="w-full h-full object-cover transition duration-500 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6">
-                            <h4 class="text-xl font-bold mb-2">Corporate Dashboard</h4>
-                            <p class="text-gray-300">Interactive data visualization for enterprise clients</p>
+                            <h4 class="text-xl font-bold mb-2">Wordpress</h4>
+                            <p class="text-gray-300">Boost your brand with a fast, WordPress-powered store.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="text-center">
-                <button class="px-8 py-3 bg-transparent border-2 border-indigo-500 rounded-full text-white font-medium hover:bg-indigo-500/20 transition duration-300 neon-hover">
-                    View All Projects
-                </button>
+                <a href="projects.html" class="px-8 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-medium hover:shadow-lg hover:shadow-indigo-500/50 transition duration-300 neon-hover">
+                    Explore Full Portfolio
+                </a>
             </div>
         </div>
     </section>
@@ -317,8 +253,8 @@
     <section class="py-20 px-6 md:px-12 bg-gradient-to-b from-slate-900 to-indigo-900/20">
         <div class="container mx-auto max-w-4xl">
             <div class="text-center mb-16">
-                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-4">Success Stories</h2>
-                <h3 class="text-3xl md:text-4xl font-bold mb-6">Client <span class="gradient-text">Testimonials</span></h3>
+                <h2 class="text-sm uppercase tracking-widest text-indigo-400 mb-4 heading-hover">Success Stories</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 heading-hover">Client <span class="gradient-text">Testimonials</span></h3>
             </div>
             <div class="relative">
                 <div class="carousel-item active glass-card p-8 md:p-12 rounded-2xl text-center">
@@ -331,10 +267,30 @@
                     </div>
                     <p class="text-xl md:text-2xl font-medium italic mb-8">"Omionix turned our vision into a masterpiece! Their team delivered beyond our expectations with a website that not only looks incredible but has significantly increased our conversion rates."</p>
                     <div class="flex items-center justify-center">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7f67f204-8604-42a5-9274-281dbfa51aa8.png" alt="Client Sarah Johnson - CEO of TechSolutions Inc." class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <img src="https://static.vecteezy.com/system/resources/previews/022/358/962/original/2701-drop-shipping-eps-free-vector.jpg" alt="Client Druv chauhan founder of newkra." class="w-12 h-12 rounded-full mr-4 object-cover">
                         <div class="text-left">
-                            <h4 class="font-bold">Sarah Johnson</h4>
-                            <p class="text-gray-400 text-sm">CEO, TechSolutions Inc.</p>
+                            <h4 class="font-bold">Dhruv </h4>
+                            <p class="text-gray-400 text-sm">Founder of Newkra</p>
+                        </div>
+                    </div>
+                </div>
+                 <div class="relative">
+                <div class="carousel-item active glass-card p-8 md:p-12 rounded-2xl text-center">
+                    <div class="mb-6 text-yellow-400 text-2xl">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-xl md:text-2xl font-medium italic mb-8">"Omionix made my travel experience truly special! From the very first inquiry to the final destination, everything was handled with care and professionalism. Their website is super easy to use, and booking was done in minutes.
+
+The team provided excellent service, comfortable accommodations, and unforgettable tour experiences — all at the best price! If you're looking for a reliable, classy, and affordable tour agency, I highly recommend Omionix. They don’t just plan trips — they create lifetime memories!” 🌏✈️."</p>
+                    <div class="flex items-center justify-center">
+                        <img src="mero vrindavan.png" alt="Client Sarah Johnson - CEO of TechSolutions Inc." class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div class="text-left">
+                            <h4 class="font-bold">Bharat</h4>
+                            <p class="text-gray-400 text-sm">Business owner of mero vrindvan tour and travels</p>
                         </div>
                     </div>
                 </div>
@@ -349,19 +305,20 @@
             <div class="absolute inset-0 bg-gradient-to-br from-indigo-900/80 to-purple-900/80"></div>
         </div>
         <div class="container mx-auto max-w-4xl relative z-10 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6">Have an idea in mind? <span class="gradient-text">Let's make it real</span></h2>
-            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">From concept to launch, our team is ready to bring your vision to life with cutting-edge technology and creative solutions.</p>
+            <h2 class="text-3xl md:text-5xl font-bold mb-6 heading-hover">Have an idea in mind? <span class="gradient-text">Let's make it real</span></h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto text-hover">From concept to launch, our team is ready to bring your vision to life with cutting-edge technology and creative solutions.</p>
             <button class="px-10 py-5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-bold text-lg hover:shadow-2xl hover:shadow-indigo-500/30 transition duration-500 neon-hover animate-pulse">
                 Start Your Project
             </button>
         </div>
     </section>
+    
 
     <!-- Contact Form -->
     <section id="contact" class="py-20 px-6 md:px-12 bg-gradient-to-b from-indigo-900/20 to-slate-900">
         <div class="container mx-auto max-w-4xl">
             <div class="glass-card p-8 md:p-12 rounded-2xl">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">Get In Touch</h2>
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center heading-hover">Get In Touch</h2>
                 <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="md:col-span-2">
                         <label class="block text-gray-300 mb-2">Your Message</label>
@@ -384,6 +341,55 @@
             </div>
         </div>
     </section>
+<!-- WhatsApp Chatbot Icon -->
+<div class="whatsapp-chatbot" onclick="openWhatsApp()">
+  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+</div>
+<!-- Main chatbot elements -->
+    <div class="chatbot-wrapper">
+        <button id="chatbotToggle" class="chatbot-button">
+            <i class="fas fa-comment-dots"></i>
+        </button>
+        
+        <div id="chatbotContainer" class="chatbot-container">
+            <div class="chatbot-header">
+                <div class="chatbot-title">
+                    <img src="https://placehold.co/64x64?text=CS" alt="Circular logo of company support team with blue gradient background">
+                    Support Assistant
+                </div>
+                <div class="chatbot-controls">
+                    <button id="chatbotMinimize"><i class="fas fa-minus"></i></button>
+                    <button id="chatbotClose"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+             <div class="chatbot-body">
+                <div id="chatbotMessages" class="chatbot-messages">
+                    <!-- Initial welcome message -->
+                    <div class="message bot-message">
+                        Hello! I'm your customer support assistant. How can I help you today?
+                        <div class="quick-replies">
+                            <button class="quick-reply" data-reply="Order status">Website status</button>
+                            <button class="quick-reply" data-reply="Returns">Maintenance</button>
+                            <button class="quick-reply" data-reply="Account help">Account help</button>
+                            <button class="quick-reply" data-reply="Payment issues">Payment issues</button>
+                        </div>
+                    </div>
+                </div>
+                 <div class="chatbot-input-area">
+                    <input id="chatbotInput" class="chatbot-input" type="text" placeholder="Type your message..." autocomplete="off">
+                    <button id="chatbotSend" class="chatbot-send">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Welcome Message Popup -->
+<div class="welcome-popup" id="welcomePopup">
+  👋 Welcome Sir! How can I help you today?
+</div>
+
 
     <!-- Footer -->
     <footer class="bg-slate-900/80 backdrop-blur-sm border-t border-slate-800 pt-16 pb-8 px-6 md:px-12">
@@ -391,22 +397,23 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div>
                     <div class="flex items-center mb-6">
-                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aef24504-3301-4be8-9c19-a582a2510207.png" alt="Omionix Logo - Small version of the main logo" class="mr-2">
-                        <span class="text-xl font-bold gradient-text">OMIONIX</span>
+                        <img src="WhatsApp Image 2025-06-25 at 13.57.17_3f1f0a21.jpg" alt="Omionix Logo - Small version of the main logo" class="mr-2">
+                        
                     </div>
+                    <span class="text-xl font-bold gradient-text">OMIONIX</span>
                     <p class="text-gray-400 mb-6">Creating digital experiences that captivate and convert.</p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-300">
+                        <a href="https://x.com/omionix?t=a1eY8cc7v0Z8o_NHI-Srfg&s=09" class="text-gray-400 hover:text-indigo-400 transition duration-300">
                             <i class="fab fa-twitter text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-300">
+                        <a href="https://www.instagram.com/omionix?igsh=MW84bmd0ZGtua3I2aQ==" class="text-gray-400 hover:text-indigo-400 transition duration-300">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-300">
+                        <a href="https://www.linkedin.com/company/omionixtechhub/?viewAsMember=true" class="text-gray-400 hover:text-indigo-400 transition duration-300">
                             <i class="fab fa-linkedin text-xl"></i>
                         </a>
-                        <a href="#" class="text-gray-400 hover:text-indigo-400 transition duration-300">
-                            <i class="fab fa-dribbble text-xl"></i>
+                        <a href="https://youtube.com/@omionixtechhub?si=UVzPRZQ7cgzFeD50" class="text-gray-400 hover:text-indigo-400 transition duration-300">
+                            <i class="fa-brands fa-youtube"></i>
                         </a>
                     </div>
                 </div>
@@ -415,9 +422,9 @@
                     <ul class="space-y-3">
                         <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
                         <li><a href="#services" class="text-gray-400 hover:text-white transition duration-300">Services</a></li>
-                        <li><a href="#work" class="text-gray-400 hover:text-white transition duration-300">Work</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
+                        <li><a href="projects.html" class="text-gray-400 hover:text-white transition duration-300">All Projects</a></li>
+                        <li><a href="#aboutus" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+                        <li><a href="##services" class="text-gray-400 hover:text-white transition duration-300">Blog</a></li>
                     </ul>
                 </div>
                 <div>
@@ -435,15 +442,16 @@
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt text-indigo-400 mt-1 mr-3"></i>
-                            <span class="text-gray-400">123 Digital Avenue, Tech City</span>
+                            <span class="text-gray-400">Omionix Techhub.in</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-phone text-indigo-400 mt-1 mr-3"></i>
-                            <span class="text-gray-400">+1 (555) 123-4567</span>
+                            <span class="text-gray-400">+91- 7906577658    </span>
+                            <span class="text-gray-400">  ,+91- 9027538632   </span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope text-indigo-400 mt-1 mr-3"></i>
-                            <span class="text-gray-400">hello@omionix.com</span>
+                            <span class="text-gray-400">Contact.omionixtechhub@gmail.com</span>
                         </li>
                     </ul>
                 </div>
@@ -453,87 +461,10 @@
             </div>
         </div>
     </footer>
+    <script src="app.js"></script>
 
-    <script>
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Testimonial Carousel
-        let currentTestimonial = 0;
-        const testimonials = [
-            {
-                quote: "Omionix turned our vision into a masterpiece! Their team delivered beyond our expectations with a website that not only looks incredible but has significantly increased our conversion rates.",
-                name: "Sarah Johnson",
-                role: "CEO, TechSolutions Inc."
-            },
-            {
-                quote: "Working with Omionix was a game-changer for our online presence. Their innovative approach to 3D elements made our brand stand out in a crowded market.",
-                name: "Michael Chen",
-                role: "Marketing Director, Global Corp"
-            },
-            {
-                quote: "The attention to detail and user experience design from Omionix resulted in a 40% increase in our e-commerce sales within the first month of launch.",
-                name: "Emily Rodriguez",
-                role: "E-commerce Manager, TrendStyle"
-            }
-        ];
-
-        function changeTestimonial(direction) {
-            const items = document.querySelectorAll('.carousel-item');
-            items.forEach(item => item.classList.remove('active'));
-            
-            currentTestimonial += direction;
-            
-            if (currentTestimonial >= testimonials.length) {
-                currentTestimonial = 0;
-            } else if (currentTestimonial < 0) {
-                currentTestimonial = testimonials.length - 1;
-            }
-            
-            // In a real implementation, you would update the testimonial content here
-            // For the wireframe, we'll just toggle the active class
-            items[currentTestimonial].classList.add('active');
-        }
-
-        // Auto-rotate testimonials
-        setInterval(() => changeTestimonial(1), 5000);
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenuButton.innerHTML = mobileMenu.classList.contains('hidden') ? 
-                '<i class="fas fa-bars"></i>' : 
-                '<i class="fas fa-times"></i>';
-        });
-
-        // Close mobile menu when clicking on links
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', function() {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
-            });
-        });
-    </script>
+    
 </body>
 </html>
+
 
