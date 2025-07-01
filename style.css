@@ -1,43 +1,71 @@
-  /* Chatbot Icon Style */
+ /* WhatsApp Button */
     .whatsapp-chatbot {
       position: fixed;
       bottom: 20px;
       right: 20px;
-      width: 65px;
-      height: 65px;
-      background-color: #25D366;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
       border-radius: 50%;
       display: flex;
-      align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       cursor: pointer;
+      z-index: 9999;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      z-index: 999;
     }
 
     .whatsapp-chatbot:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.6);
+      animation: bounce 0.6s ease;
     }
 
     .whatsapp-chatbot img {
-      width: 35px;
-      height: 35px;
+      width: 36px;
+      height: 36px;
+      pointer-events: none;
     }
 
-    .welcome-popup {
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      30% { transform: translateY(-10px); }
+      50% { transform: translateY(0); }
+      70% { transform: translateY(-5px); }
+      100% { transform: translateY(0); }
+    }
+
+    /* Welcome Popup */
+    #welcomePopup {
       position: fixed;
-      bottom: 100px;
-      right: 30px;
-      background: #fff;
-      color: #000;
-      padding: 12px 16px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      font-family: sans-serif;
+      bottom: 90px;
+      right: 90px;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 10px;
       font-size: 14px;
       display: none;
+      z-index: 9999;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 600px) {
+      #welcomePopup {
+        right: 20px;
+        bottom: 90px;
+      }
+
+      .whatsapp-chatbot {
+        width: 55px;
+        height: 55px;
+      }
+
+      .whatsapp-chatbot img {
+        width: 32px;
+        height: 32px;
+      }
     }
     /* Custom CSS for modern chatbot */
         :root {
