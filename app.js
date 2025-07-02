@@ -1,3 +1,63 @@
+// Firebase configuration and contact form submission
+const firebaseConfig = {
+  apiKey: "AIzaSyC8LaNW6PGrasUTJwJQlgRsNWJbTKbn1NM",
+  authDomain: "omionix-techhub.firebaseapp.com",
+  projectId: "omionix-techhub",
+  storageBucket: "omionix-techhub.firebasestorage.app",
+  messagingSenderId: "1050111036238",
+  appId: "1:1050111036238:web:582f5534c662a912aaac1f",
+  measurementId: "G-JBKF48YQLR"
+};
+
+// Initialize Firebase
+if (typeof firebase === 'undefined') {
+  const script = document.createElement('script');
+  script.src = "https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js";
+  script.onload = () => {
+    const dbScript = document.createElement('script');
+    dbScript.src = "https://www.gstatic.com/firebasejs/9.22.2/firebase-database-compat.js";
+    dbScript.onload = initFirebaseContact;
+    document.head.appendChild(dbScript);
+  };
+  document.head.appendChild(script);
+} else {
+  initFirebaseContact();
+}
+
+function initFirebaseContact() {
+  if (!firebase.apps.length) {
+    firebase.initializeApp(firebaseConfig);
+  }
+  const database = firebase.database();
+  const contactForm = document.querySelector('#contact form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const phone = document.getElementById('contact-phone').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+      if (!name || !email || !phone || !message) {
+        alert('Please fill in all fields.');
+        return;
+      }
+      const requestRef = database.ref('request').push();
+      requestRef.set({
+        name,
+        email,
+        phone,
+        message,
+        timestamp: new Date().toISOString()
+      }).then(() => {
+        alert('Thank you! Your request has been submitted.');
+        contactForm.reset();
+      }).catch((error) => {
+        alert('Error submitting your request. Please try again.');
+        console.error(error);
+      });
+    });
+  }
+}
 // Navbar Scroll Effect
         window.addEventListener('scroll', function() {
             const navbar = document.querySelector('.navbar');

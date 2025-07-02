@@ -324,15 +324,19 @@ The team provided excellent service, comfortable accommodations, and unforgettab
                 <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div class="md:col-span-2">
                         <label class="block text-gray-300 mb-2">Your Message</label>
-                        <textarea class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="4" placeholder="Tell us about your project..."></textarea>
+                        <textarea id="contact-message" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" rows="4" placeholder="Tell us about your project..." required></textarea>
                     </div>
                     <div>
                         <label class="block text-gray-300 mb-2">Name</label>
-                        <input type="text" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your name">
+                        <input id="contact-name" type="text" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your name" required>
                     </div>
                     <div>
                         <label class="block text-gray-300 mb-2">Email</label>
-                        <input type="email" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your email">
+                        <input id="contact-email" type="email" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your email" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 mb-2">Phone No</label>
+                        <input id="contact-phone" type="tel" class="w-full bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500" placeholder="Your phone number" required>
                     </div>
                     <div class="md:col-span-2 flex justify-center">
                         <button type="submit" class="px-8 py-4 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-bold hover:shadow-lg hover:shadow-indigo-500/50 transition duration-300 neon-hover">
