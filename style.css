@@ -1,4 +1,9 @@
- /* WhatsApp Button */
+#head1{
+ color:white;
+}
+
+
+/* WhatsApp Button */
     .whatsapp-chatbot {
       position: fixed;
       bottom: 20px;
