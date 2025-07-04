@@ -68,55 +68,18 @@ function initFirebaseContact() {
             }
         });
 
-        // Testimonial Carousel
-        let currentTestimonial = 0;
-        const testimonials = [
-            {
-                quote: "Omionix turned our vision into a masterpiece! Their team delivered beyond our expectations with a website that not only looks incredible but has significantly increased our conversion rates.",
-                name: "Sarah Johnson",
-                role: "CEO, TechSolutions Inc."
-            },
-            {
-                quote: "Working with Omionix was a game-changer for our online presence. Their innovative approach to 3D elements made our brand stand out in a crowded market.",
-                name: "Michael Chen",
-                role: "Marketing Director, Global Corp"
-            },
-            {
-                quote: "The attention to detail and user experience design from Omionix resulted in a 40% increase in our e-commerce sales within the first month of launch.",
-                name: "Emily Rodriguez",
-                role: "E-commerce Manager, TrendStyle"
-            }
-        ];
+       let currentTestimonial = 0;
+    const items = document.querySelectorAll('#testimonial-carousel .carousel-item');
 
-        function changeTestimonial(direction) {
-            const items = document.querySelectorAll('.carousel-item');
-            items.forEach(item => item.classList.remove('active'));
-            
-            currentTestimonial += direction;
-            
-            if (currentTestimonial >= testimonials.length) {
-                currentTestimonial = 0;
-            } else if (currentTestimonial < 0) {
-                currentTestimonial = testimonials.length - 1;
-            }
-            
-            // In a real implementation, you would update the testimonial content here
-            // For the wireframe, we'll just toggle the active class
-            items[currentTestimonial].classList.add('active');
-        }
+    function changeTestimonial(direction) {
+        items[currentTestimonial].classList.remove('active');
+        currentTestimonial = (currentTestimonial + direction + items.length) % items.length;
+        items[currentTestimonial].classList.add('active');
+    }
 
-        // Auto-rotate testimonials
-        setInterval(() => changeTestimonial(1), 5000);
+    // Rotate every 5 seconds
+    setInterval(() => changeTestimonial(1), 15000);
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
 
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
